@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <title>БутылкаСтор</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Контент контейнер -->
+    <div class="content container p-3">
+      <header
+        class="container-fluid border border-secondary rounded-4 p-3 bg-dark"
+      >
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <!-- Контейнер с логотипом -->
+            <div class="col d-flex justify-content-center">
+              <div class="borderLogo">
+                <img src="img/logo.png" class="w-100 h-100" alt="Логотип" />
+              </div>
+            </div>
+            <!-- Контейнер с кнопками для навигации -->
+            <div class="col-md-6 d-flex justify-content-center gap-2">
+              <!-- Кнопка поиска -->
+              <nav
+                class="navbar bg-black border border-secondary rounded-4 test1"
+              >
+                <form class="container-fluid">
+                  <div class="input-group">
+                    <span
+                      class="input-group-text bg-black text-light border border-black"
+                      id="basic-addon1"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-search"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                        />
+                      </svg>
+                    </span>
+                    <input
+                      type="search"
+                      class="form-control bg-black text-light border border-black searchInput fw-bold"
+                      placeholder="Поисковый запрос"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </form>
+              </nav>
+              <!-- Кнопка меню -->
+              <button
+                class="btn btn-lg color-btn glow-btn bi-list fw-bold"
+                type="submit"
+              >
+                Меню
+              </button>
+              <!-- Кнопка пополнение по стиму -->
+              <button
+                class="btn btn-lg glow-btn bi-steam bg-black text-light"
+                type="submit"
+              ></button>
+            </div>
+            <!-- Контейнер с кнопкой авторизации -->
+            <div class="col d-flex justify-content-center">
+              <button
+                class="btn-auth btn btn-lg glow-btn bi-list bi-fingerprint fw-bold"
+                data-bs-toggle="modal"
+                data-bs-target="#authModal"
+                type="submit"
+              >
+                Авторизация
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Промо секция -->
+      <div class="container text-start pt-5 fs-1 fw-bold">
+        <div class="row">
+          <div class="col text-start d-flex align-items-center">
+            <p>Лучшие модифицированные клиенты - твое огромное преимущество</p>
+          </div>
+          <div class="col">
+            <img src="img/promo-image.png" class="w-100 h-100" alt="Логотип" />
+          </div>
+        </div>
+      </div>
+      <!-- Контейнер со слайдером и кнопкой -->
+      <div class="container pt-5 fs-3 fw-bold">
+        <div class="row">
+          <!-- Колонка со слайдером -->
+          <div class="col-md-10">
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <!-- Контейнер с кнопками индикаторами снизу слайдеров -->
+              <div class="carousel-indicators">
+                <!-- Кнопка индикации 1 -->
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <!-- Кнопка индикации 2 -->
+                <button
+                  class="sliderShadow"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <!-- Кнопка индикации 3 -->
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <!-- Контейнер со слайдерами -->
+              <div class="carousel-inner rounded-4">
+                <!-- Слайдер 1 -->
+                <div class="carousel-item active">
+                  <img src="img/slide1.jpeg" class="d-block w-100" alt="..." />
+                </div>
+                <!-- Слайдер 2 -->
+                <div class="carousel-item">
+                  <img src="img/slide2.jpeg" class="d-block w-100" alt="..." />
+                </div>
+                <!-- Слайдер 3 -->
+                <div class="carousel-item">
+                  <img src="img/slide3.jpeg" class="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <!-- Кнопка предыдущий слайдер -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Предыдущий</span>
+              </button>
+              <!-- Кнопка следующий слайдер -->
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Следующий</span>
+              </button>
+            </div>
+          </div>
+          <!-- Колонка справа от слайдера -->
+          <div class="col">
+            <button
+              class="glow-btn btn w-100 h-100 btn-lg color-btn glow-btn fw-bold fs-2 bi-arrow-bar-down"
+              type="submit"
+            >
+              Перейти в каталог
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Контейнер DMA предложений -->
+      <div
+        id="productCarousel"
+        class="carousel slide mt-5 text-center"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <h2 class="fw-bold fs-1 mb-3">DMA в продаже!</h2>
+        <div class="carousel-inner rounded-4 fw-bold fs-5 mb-3">
+          <div class="carousel-item active">
+            <img src="img/dma1.png" class="d-block w-100" />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-end text-center text-white mb-4"
+            >
+              <h5>Cap DMA 75T</h5>
+              <p class="mb-2">
+                Карта Cap 75T DMA обеспечивает молниеносную скорость передачи
+                данных, исключает задержки и гарантирует более плавную работу по
+                сравнение с 35т чипами.
+              </p>
+              <button class="btn btn-lg color-btn glow-btn bi-list fw-bold">
+                Купить
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/dma2.png" class="d-block w-100" />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-end text-center text-white mb-4"
+            >
+              <h5>StarkDMA 75T</h5>
+              <p class="mb-2">
+                StarkDMA 75t обеспечивает молниеносную скорость передачи данных,
+                исключает задержки и гарантирует более плавную работу по
+                сравнение с 35т чипами на (3-7% выше по факту)
+              </p>
+              <button class="btn btn-lg color-btn glow-btn bi-list fw-bold">
+                Купить
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/dma3.png" class="d-block w-100" />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-end text-center text-white mb-4"
+            >
+              <h5>Captain DMA 4.0</h5>
+              <p class="mb-2">
+                Плата Captain DMA 4-го поколения PCIe содержит чип FPGA серии
+                Xilinx® 7 Artix-7 35T, который обеспечивает плавную и быструю
+                обработку данных.
+              </p>
+              <button class="btn btn-lg color-btn glow-btn bi-list fw-bold">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+      <!-- Контейнер каталога -->
+      <h2 class="container-fluid text-center mt-5 fw-bold fs-1">Каталог игр</h2>
+      <div class="container d-flex justify-content-center">
+        <div class="row gap-4">
+          <div class="cardHW col-6 col-sm-4 w-40 mt-3">
+            <button
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('img/card1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              "
+              class="card-btn w-100 h-100 text-light fw-bold fs-2"
+              type="submit"
+            >
+              RUST
+            </button>
+          </div>
+          <div class="cardHW col-6 col-sm-4 w-40 mt-3">
+            <button
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('img/card2.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              "
+              class="card-btn w-100 h-100 text-light fw-bold fs-2"
+              type="submit"
+            >
+              DAYZ
+            </button>
+          </div>
+          <div class="cardHW col-6 col-sm-4 w-40 mt-3">
+            <button
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('img/card3.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              "
+              class="card-btn w-100 h-100 text-light fw-bold fs-2"
+              type="submit"
+            >
+              Escape From Tarkov
+            </button>
+          </div>
+          <div class="cardHW col-6 col-sm-4 w-40 mt-3">
+            <button
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                  ),
+                  url('img/card4.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              "
+              class="card-btn w-100 h-100 text-light fw-bold fs-2"
+              type="submit"
+            >
+              PUBG
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Контейнер информации -->
+      <div class="container mt-5 fs-5">
+        <div class="row justify-content-start">
+          <div class="col-md-10 text-start">
+            <!-- Первая инфа -->
+            <h2 class="mt-5 text-light fs-1 fw-bold">
+              Продажа клиентов на сайте БутылкаСтор !
+            </h2>
+            <p class="mt-5 text-light fw-bold">
+              Если ты ищешь способ улучшить свои результаты в любимых онлайн
+              играх, то ты попал по адресу! EliteHacks предлагает тебе лучшие
+              читы от проверенных временем разработчиков. Мы заботимся о том,
+              чтобы каждый наш клиент получал исключительное качество и
+              максимальное удовлетворение от игрового процесса.
+            </p>
+            <!-- Вторая инфа -->
+            <h2 class="mt-5 text-light fs-1 fw-bold">
+              Почему стоит выбрать нас?
+            </h2>
+            <ol class="mt-5 text-light fw-bold">
+              <li class="mt-2 text-light fw-bold">
+                Качество и надежность. Мы работаем только с лучшими
+                разработчиками, чтобы предоставить тебе читы, которые
+                действительно работают и не попадают под бан.
+              </li>
+              <li class="mt-2 text-light fw-bold">
+                Техническая поддержка. Наши специалисты готовы помочь тебе в
+                любое время с установкой и настройкой клиентов. У тебя возникли
+                проблемы? Не беспокойся, мы всегда рядом, чтобы помочь!
+              </li>
+              <li class="mt-2 text-light fw-bold">
+                Постоянные скидки и акции. Мы ценим каждого клиента и поэтому
+                регулярно радуем наших пользователей приятными сюрпризами.
+                Промокоды на праздники, специальные предложения для постоянных
+                клиентов – у нас всегда что-то интересное!
+              </li>
+            </ol>
+            <!-- Третья инфа -->
+            <h2 class="mt-5 text-light fs-1 fw-bold">Наш опыт</h2>
+            <p class="mt-5 text-light fw-bold">
+              Мы работаем в сфере продажи клиентов уже более 10 лет, а наш сайт
+              успешно функционирует уже более 4 лет. За это время мы накопили
+              огромный опыт и знания, которые помогают нам быть лучшими для
+              наших клиентов.
+            </p>
+            <!-- Четвертая инфа -->
+            <h2 class="mt-5 text-light fs-1 fw-bold">Наши предложения</h2>
+            <p class="mt-5 text-light fw-bold">
+              На нашем сайте ты найдешь клиенты для самых популярных онлайн игр,
+              включая:
+            </p>
+            <ul>
+              <li class="mt-2 text-light fw-bold">DayZ</li>
+              <li class="mt-2 text-light fw-bold">Escape From Tarkov</li>
+              <li class="mt-2 text-light fw-bold">Rust</li>
+            </ul>
+            <p class="mt-5 text-light fw-bold">
+              Но это далеко не все! Мы постоянно обновляем ассортимент и следим
+              за новинками, чтобы ты всегда мог быть в курсе самых актуальных
+              предложений.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Подвал -->
+      <footer>
+        <div class="container mt-5 fs-5">
+          <div class="row justify-content-start">
+            <div class="col-md-7 text-start">
+              <div class="borderLogo">
+                <img src="img/logo.png" class="w-100 h-100" alt="Логотип" />
+              </div>
+              <p class="mt-5 text-secondary">Присоединяйся к нам!</p>
+              <p class="mt-5 text-secondary">
+                Мы всегда рады новым клиентам! Присоединяйся к нашим телеграм и
+                дискорд каналам, чтобы быть в курсе последних новостей об
+                обновлениях читов и получать специальные скидки. Мы ценим твою
+                поддержку!
+              </p>
+              <ul class="d-flex gap-5">
+                <i class="bi bi-discord iconColor"></i>
+                <i class="bi bi-instagram iconColor"></i>
+                <i class="bi bi-youtube iconColor"></i>
+                <i class="bi bi-twitter iconColor"></i>
+                <i class="bi bi-facebook iconColor"></i>
+              </ul>
+              <p class="mt-5 text-secondary">BottleStore @ 2025</p>
+            </div>
+            <div class="col-md-5 text-end">
+              <ul>
+                <li><a class="text-secondary" href="#">Контакты</a></li>
+                <li><a class="text-secondary" href="#">Гарантии</a></li>
+                <li><a class="text-secondary" href="#">Розыгрыши</a></li>
+                <li><a class="text-secondary" href="#">Договор оферты</a></li>
+                <li>
+                  <a class="text-secondary" href="#">Оплата и Доставка</a>
+                </li>
+                <li>
+                  <a class="text-secondary" href="#">Известные проблемы</a>
+                </li>
+                <li>
+                  <a class="text-secondary" href="#">Персональные данные</a>
+                </li>
+                <li>
+                  <a class="text-secondary" href="#"
+                    >Пользовательское соглашение</a
+                  >
+                </li>
+                <li>
+                  <a class="text-secondary" href="#"
+                    >Политика Конфидециальности</a
+                  >
+                </li>
+                <li>
+                  <a style="color: rgba(196, 255, 107, 0.993)" href="#"
+                    >БутылкаСтор</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Модальные окна -->
+      <div
+        class="modal fade"
+        id="authModal"
+        tabindex="-1"
+        aria-labelledby="authModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-dialog">
+            <div
+              class="modal-content d-flex justify-content-center text-center bg-dark p-3"
+            >
+              <div class="card-header text-start">
+                <h5 class="text-secondary fs-4">Авторизация</h5>
+              </div>
+              <div class="modal-body fs-5">
+                <div class="container-fluid">
+                  <div class="d-flex w-50 text-start gap-5">
+                    <i class="bi bi-emoji-sunglasses iconColor"></i>
+                    <h2 class="textColor">Добро пожаловать!</h2>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >Введите вашу почту:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control w-75 mx-auto p-2 fs-5 bg-dark AuthInput text-light"
+                      id="email"
+                      name="email"
+                      placeholder="Введите ваш Email адрес"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label"
+                      >Введите ваш пароль:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control w-75 mx-auto p-2 fs-5 bg-dark AuthInput text-light"
+                      id="password"
+                      name="password"
+                      placeholder="Введите ваш пароль"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-lg bg-primary color-btn glow-btn fw-bold"
+                >
+                  Войти
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-lg bg-danger color-btn glow-btn fw-bold"
+                >
+                  Зарегистрироваться
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Конец контент контейнера -->
+    </div>
+    <!-- Подключение скриптов -->
+    <script src="https://thecode.media/wp-content/uploads/2019/12/snowfall2020.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
