@@ -47,18 +47,23 @@ header {
 /* Класс для инпута */
 .searchInput,
 .searchInput::placeholder {
-  padding-left: 10px;
   box-shadow: none !important;
   color: white;
   border: none;
 }
 .searchInput {
   width: 1px !important;
+  transition: width 0.5s;
 }
 .test1:hover {
   .searchInput {
-    width: 150px !important;
+    width: 200px !important;
   }
+}
+.searchInput::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
 .searchInput:hover {
   width: 100px;
@@ -124,4 +129,13 @@ footer a {
 }
 footer a:hover {
   color: aliceblue !important;
+}
+.dropdown-item {
+  text-shadow: transparent;
+  transition: 0.3s ease;
+}
+.dropdown-item:hover {
+  background: none !important;
+  text-shadow: 0px 0px 30px rgba(196, 255, 107, 0.993);
+  color: rgba(196, 255, 107, 0.993) !important;
 }
