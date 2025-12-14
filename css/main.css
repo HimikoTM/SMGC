@@ -56,7 +56,7 @@ header {
   width: 1px !important;
   transition: width 0.5s;
 }
-.test1:hover {
+.searchDiv:hover {
   .searchInput {
     width: 200px !important;
   }
@@ -131,6 +131,7 @@ footer a {
 footer a:hover {
   color: aliceblue !important;
 }
+/* Классы для дроп меню */
 .dropdown-item {
   text-shadow: transparent;
   transition: 0.3s ease;
